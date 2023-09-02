@@ -1,0 +1,57 @@
+{% extends 'memo/base.html' %}
+    {% load static %} 
+        {% block content %}
+                    <div class="container">
+                    <div class="row">
+                        {% for profile in profiles %}
+                        <div class="col-md-4">
+                        <div class="card">
+                            <img
+                            class="card-img-top"
+                            src="{{ profile.Profile_pick.url }}"
+                            alt="Profile picture"
+                            width="300"
+                            height="400"
+                            />
+                            <div class="card-body">
+                            <h5 class="card-title">{{ profile.name }}</h5>
+                            <a
+                                href="{% url 'memo:profile_id' profile.id %}"
+                                class="btn btn-primary"
+                                >View Profile</a
+                            >
+                            </div>
+                        </div>
+                        <p></p>
+                        </div>
+
+                        {% endfor %}
+                    </div>
+                </div>
+    {% endblock %}
+
+    {% comment %} <!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Profile List</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <h1>Welcome to Profile list page</h1>
+    {% if profiles %}
+    <ul>
+      {%for profile in profiles %}
+      <li>
+        <a href="{% url 'memo:profile_id' profile.id %}">{{profile.name}}</a>
+      </li>
+      {% endfor%}
+    </ul>
+    {% endif %}
+  </body>
+</html>
+{% endcomment %} 
