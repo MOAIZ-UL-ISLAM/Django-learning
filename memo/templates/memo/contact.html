@@ -1,0 +1,10 @@
+{% extends 'memo/base.html' %}
+{% load static  %}
+{% block content %}
+        <form method='post'>
+            {{form.as_p}}
+            {% csrf_token %}
+            <button type='submit' value='submit'>Send</button>
+        </form>
+        
+{% endblock  %}

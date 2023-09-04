@@ -1,0 +1,15 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% block content %}
+<h1>register account</h1>
+<form method='post'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type='submit'> register</button>
+
+
+</form>
+<p>Akready have a account</p>
+<a href="{% url 'accounts:login' %}" class='btn btn-primary'>login</a>
+
+{% endblock  %}

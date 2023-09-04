@@ -1,0 +1,16 @@
+{% extends 'memo/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    form{
+        margin-bottom:50px;
+    }
+</style>
+        <form method='post' enctype='multipart/form-data'>
+            {% csrf_token %}
+            <h1>New Profile</h1>
+            {{form.as_p}}
+            <button type='submit' value='submit' class='btn btn-primary '>Submit</button>
+        </form>
+        
+{% endblock %}

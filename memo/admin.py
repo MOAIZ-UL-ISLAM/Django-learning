@@ -8,7 +8,7 @@ class ProfileAdmin(admin.ModelAdmin):
 
 admin.site.register(Profile)
 admin.site.register(Caste)
-admin.site.register(Hobby)
 admin.site.register(FatherProfile)
 admin.site.register(Sect)
 admin.site.register(Religion)
+admin.site.register(Hobby)

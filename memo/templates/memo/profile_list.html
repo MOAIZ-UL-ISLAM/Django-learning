@@ -1,7 +1,8 @@
 {% extends 'memo/base.html' %}
     {% load static %} 
         {% block content %}
-                    <div class="container">
+        <div class="container">
+                      <a href="{% url 'memo:new_profile' %}" class="btn btn-warning">Add profile</a>
                     <div class="row">
                         {% for profile in profiles %}
                         <div class="col-md-4">
